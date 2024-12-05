@@ -1,0 +1,23 @@
+package parseur;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String ch ="ccdcbcd";
+		TokenManager tm = new TokenManager(ch);
+		Parseur parseur =new Parseur(tm);
+		try {
+			parseur.parse();
+			System.out.println(ch + " est valide ");
+		}catch (RuntimeException e) {
+			System.out.println(ch + " n 'est  pas valide ");
+			System.out.println(e.getMessage());
+		}
+		
+		
+		
+	}
+
+}
